@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #0a0a0f;
+  color: #e0e0e0;
+  overflow-x: hidden;
+}
+
+.glass {
+  background: rgba(15, 15, 25, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 255, 200, 0.15);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.glow-text {
+  text-shadow: 0 0 20px rgba(0, 255, 200, 0.5), 0 0 40px rgba(0, 255, 200, 0.3);
+}
+
+.pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 5px rgba(0, 255, 200, 0.3), 0 0 10px rgba(0, 255, 200, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(0, 255, 200, 0.6), 0 0 40px rgba(0, 255, 200, 0.4); }
+}
+
+.node-border {
+  border: 1px solid rgba(0, 255, 200, 0.2);
+  background: linear-gradient(135deg, rgba(0, 255, 200, 0.05) 0%, rgba(100, 0, 255, 0.05) 100%);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 200, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 200, 0.5);
+}
