@@ -17,6 +17,7 @@ import {
   Award
 } from 'lucide-react'
 import NetworkGlobe from './NetworkGlobe'
+import profilePhoto from '../assets/profile-photo.png'
 
 const specialtyIcons = [
   Shield, Network, Server, Cloud, Wifi, Lock, Activity, Database, Code, Radio, Cpu
@@ -96,8 +97,14 @@ const HeroSection = () => {
               transition={{ delay: 0.4, duration: 0.8, type: "spring" }}
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-2xl scale-150" />
-                <NetworkGlobe />
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-purple-500/30 rounded-full blur-2xl scale-110" />
+                <div className="relative w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-2 border-cyan-400/30 shadow-[0_0_30px_rgba(0,255,200,0.3)]">
+                  <img 
+                    src={profilePhoto} 
+                    alt="Zeeshan Faiz" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </motion.div>
 
