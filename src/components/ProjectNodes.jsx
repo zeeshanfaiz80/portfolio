@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Briefcase, MapPin, Calendar } from 'lucide-react'
 
 const experience = [
   {
@@ -67,6 +68,15 @@ const experience = [
   }
 ]
 
+const cardVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: (i) => ({
+    opacity: 1,
+    x: 0,
+    transition: { delay: i * 0.1, duration: 0.5 }
+  })
+}
+
 const ProjectNodes = () => {
   return (
     <section id="experience" className="py-8 md:py-12 px-3 md:px-4">
@@ -88,22 +98,52 @@ const ProjectNodes = () => {
           {experience.map((role, index) => (
             <motion.div
               key={role.id}
-              className="glass rounded-xl md:rounded-2xl p-4 md:p-5 border border-white/10"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              custom={index}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
-              transition={{ delay: index * 0.08, duration: 0.5 }}
+              className="group glass rounded-xl md:rounded-2xl p-4 md:p-5 border border-white/10 hover:border-cyan-400/30 transition-all relative overflow-hidden"
             >
-              <div className="flex flex-col gap-1 md:flex-row md:items-start md:justify-between">
-                <div>
-                  <h3 className="text-base md:text-lg font-semibold text-white">{role.title}</h3>
-                  <p className="text-xs md:text-sm text-gray-400 mt-0.5">{role.company} · {role.location}</p>
+              <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+              
+              <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between relative">
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
+                      <Briefcase className="w-4 h-4 md:w-5 md:h-5 text-cyan-400" />
+                    </div>
+                    <h3 className="text-base md:text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">{role.title}</h3>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-3 text-xs md:text-sm">
+                    <div className="flex items-center gap-1 text-gray-400">
+                      <MapPin className="w-3 h-3" />
+                      <span>{role.company}</span>
+                    </div>
+                    <span className="text-gray-600">·</span>
+                    <div className="flex items-center gap-1 text-gray-400">
+                      <MapPin className="w-3 h-3" />
+                      <span>{role.location}</span>
+                    </div>
+                  </div>
                 </div>
-                <span className="text-xs uppercase tracking-[0.25em] text-cyan-300 mt-1 md:mt-0">{role.period}</span>
+                <div className="flex items-center gap-1 text-xs uppercase tracking-[0.25em] text-cyan-300 mt-1 md:mt-0">
+                  <Calendar className="w-3 h-3" />
+                  <span>{role.period}</span>
+                </div>
               </div>
-              <ul className="mt-3 md:mt-4 list-disc list-inside space-y-1 md:space-y-2 text-xs md:text-sm text-gray-300 leading-5 md:leading-6">
-                {role.highlights.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
+              <ul className="mt-4 space-y-2 text-xs md:text-sm text-gray-300 leading-5 md:leading-6">
+                {role.highlights.map((bullet, i) => (
+                  <motion.li 
+                    key={bullet}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 + i * 0.05 }}
+                    className="flex items-start gap-2"
+                  >
+                    <span className="inline-block w-1.5 h-1.5 mt-1.5 rounded-full bg-cyan-500/50 flex-shrink-0" />
+                    <span>{bullet}</span>
+                  </motion.li>
                 ))}
               </ul>
             </motion.div>

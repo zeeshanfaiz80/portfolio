@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { GraduationCap, Calendar, MapPin } from 'lucide-react'
 
 const education = [
   {
@@ -18,6 +19,15 @@ const education = [
     details: 'Bachelor\'s degree in telecommunications and networking'
   }
 ]
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.15, duration: 0.5 }
+  })
+}
 
 const EducationSection = () => {
   return (
@@ -40,19 +50,40 @@ const EducationSection = () => {
           {education.map((edu, index) => (
             <motion.div
               key={edu.id}
-              className="glass rounded-xl md:rounded-2xl p-4 md:p-5 border border-white/10"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              custom={index}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.6 }}
+              className="group glass rounded-xl md:rounded-2xl p-4 md:p-5 border border-white/10 hover:border-cyan-400/30 transition-all relative overflow-hidden"
             >
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-4">
-                <div>
-                  <h3 className="text-base md:text-lg font-semibold text-white">{edu.degree}</h3>
-                  <p className="text-sm text-gray-400 mt-0.5">{edu.school} · {edu.location}</p>
-                  <p className="text-xs md:text-sm text-gray-500 mt-1">{edu.details}</p>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
+              
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-4 relative">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <GraduationCap className="w-5 h-5 md:w-6 md:h-5 text-cyan-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-base md:text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">{edu.degree}</h3>
+                    <div className="flex flex-wrap items-center gap-2 mt-1">
+                      <div className="flex items-center gap-1 text-sm text-gray-400">
+                        <MapPin className="w-3 h-3" />
+                        <span>{edu.school}</span>
+                      </div>
+                      <span className="text-gray-600">·</span>
+                      <div className="flex items-center gap-1 text-sm text-gray-400">
+                        <MapPin className="w-3 h-3" />
+                        <span>{edu.location}</span>
+                      </div>
+                    </div>
+                    <p className="text-xs md:text-sm text-gray-500 mt-2">{edu.details}</p>
+                  </div>
                 </div>
-                <span className="text-xs md:text-sm uppercase tracking-[0.25em] text-cyan-300 whitespace-nowrap">{edu.period}</span>
+                <div className="flex items-center gap-1 text-xs md:text-sm uppercase tracking-[0.25em] text-cyan-300 whitespace-nowrap bg-cyan-500/10 px-3 py-1.5 rounded-full">
+                  <Calendar className="w-3 h-3" />
+                  <span>{edu.period}</span>
+                </div>
               </div>
             </motion.div>
           ))}
