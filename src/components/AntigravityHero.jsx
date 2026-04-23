@@ -102,7 +102,7 @@ const HeroSection = () => {
               </motion.div>
               
               {/* Headline */}
-              <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1]">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1]">
                 <motion.span 
                   className="block text-white"
                   initial={{ opacity: 0, y: 30 }}
@@ -178,7 +178,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right - Profile Card */}
-          <div className="lg:col-span-5 hidden lg:block">
+          <div className="lg:col-span-5 mt-12 lg:mt-0">
             <motion.div
               className="relative"
               initial={{ opacity: 0, x: 50 }}
@@ -196,7 +196,7 @@ const HeroSection = () => {
                 <div className="absolute -inset-4 bg-gradient-to-br from-sky-500/10 via-sky-600/5 to-transparent rounded-3xl blur-xl" />
                 
                 {/* Main card */}
-                <div className="glass-card rounded-3xl p-10 relative overflow-hidden">
+                <div className="glass-card rounded-3xl p-8 lg:p-10 relative overflow-hidden">
                   {/* Ambient effects */}
                   <div className="absolute inset-0 bg-gradient-to-br from-sky-500/[0.05] via-transparent to-transparent" />
                   <div className="absolute top-0 right-0 w-64 h-64 bg-sky-500/10 rounded-full blur-3xl" />
@@ -211,27 +211,27 @@ const HeroSection = () => {
                   {/* Content */}
                   <div className="relative z-10 flex flex-col items-center text-center">
                     {/* Large Profile Image */}
-                    <div className="relative mb-8">
+                    <div className="relative mb-6 lg:mb-8">
                       {/* Outer ring glow */}
                       <div className="absolute -inset-3 bg-gradient-to-br from-sky-400/30 to-sky-600/20 rounded-full blur-md" />
                       
                       {/* Image container */}
-                      <div className="relative w-44 h-44 md:w-52 md:h-52 rounded-2xl overflow-hidden border-4 border-slate-800/50 shadow-2xl shadow-sky-500/20">
+                      <div className="relative w-32 h-32 lg:w-44 lg:h-44 rounded-2xl overflow-hidden border-4 border-slate-800/50 shadow-2xl shadow-sky-500/20">
                         <img src={profilePhoto} alt="Zeeshan Faiz" className="w-full h-full object-cover" />
                       </div>
                       
                       {/* Status indicator */}
-                      <div className="absolute bottom-2 right-2 w-6 h-6 bg-sky-500 rounded-full border-4 border-[#0a1428]">
+                      <div className="absolute bottom-1 right-1 w-5 h-5 bg-sky-500 rounded-full border-3 border-[#0a1428] lg:border-4 lg:bottom-2 lg:right-2 lg:w-6 lg:h-6">
                         <div className="absolute inset-0 rounded-full bg-sky-400 animate-ping opacity-50" />
                       </div>
                     </div>
                     
                     {/* Name and title */}
-                    <h3 className="font-display text-2xl font-bold mb-2">Zeeshan Faiz</h3>
-                    <p className="font-mono text-xs text-sky-400 mb-6">IT Infrastructure Engineer</p>
+                    <h3 className="font-display text-xl lg:text-2xl font-bold mb-1">Zeeshan Faiz</h3>
+                    <p className="font-mono text-xs text-sky-400 mb-5 lg:mb-6">IT Infrastructure Engineer</p>
 
                     {/* Contact info */}
-                    <div className="space-y-3 w-full mb-8">
+                    <div className="space-y-2 w-full mb-6 lg:mb-8">
                       <div className="flex items-center justify-center gap-2 text-slate-400">
                         <MapPin className="w-4 h-4 text-sky-500 flex-shrink-0" />
                         <span className="text-sm">Vienna, Austria</span>
@@ -242,12 +242,12 @@ const HeroSection = () => {
                       </div>
                     </div>
 
-                    {/* Skills */}
-                    <div className="pt-6 border-t border-slate-800/50 w-full">
+                    {/* Capabilities */}
+                    <div className="pt-5 lg:pt-6 border-t border-slate-800/50 w-full">
                       <div className="flex flex-wrap justify-center gap-2">
-                        {['FortiGate', 'BGP', 'VMware', 'Linux', 'Azure'].map((skill) => (
-                          <span key={skill} className="px-3 py-1.5 text-xs font-mono text-slate-400 bg-slate-800/50 rounded-lg">
-                            {skill}
+                        {['Firewall', 'Routing', 'Switching', 'Virtualization', 'Linux'].map((cap) => (
+                          <span key={cap} className="px-3 py-1.5 text-xs font-mono text-slate-300 bg-slate-800/50 rounded-lg">
+                            {cap}
                           </span>
                         ))}
                       </div>
