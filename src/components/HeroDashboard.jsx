@@ -70,7 +70,7 @@ const HeroSection = () => {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
                 Zeeshan <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400">Faiz</span>
               </h1>
-              <p className="text-sm md:text-base text-slate-300 leading-relaxed">
+              <p className="text-sm md:text-base text-slate-300 leading-relaxed text-justify">
                 IT Infrastructure Engineer with experience designing, implementing, and supporting secure, multi-site environments covering networks, servers, storage, and virtualization. Skilled in firewall administration, routing and switching, Linux and Microsoft 365 administration, backup and recovery, and infrastructure monitoring using common industry tools. Comfortable working with cross-functional teams, managing incidents in a structured way, and coordinating with vendors to keep business services stable and available.
               </p>
               <motion.div
