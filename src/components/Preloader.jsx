@@ -7,7 +7,7 @@ const Preloader = ({ onComplete }) => {
 
   useEffect(() => {
     let interval
-    const duration = 1500
+    const duration = 1200
     const steps = 100
     const stepTime = duration / steps
     
@@ -22,8 +22,8 @@ const Preloader = ({ onComplete }) => {
         clearInterval(interval)
         setTimeout(() => {
           setIsComplete(true)
-          setTimeout(onComplete, 800)
-        }, 300)
+          setTimeout(onComplete, 600)
+        }, 200)
       }
     }, stepTime)
 
@@ -34,43 +34,40 @@ const Preloader = ({ onComplete }) => {
     <AnimatePresence>
       {!isComplete && (
         <motion.div
-          className="fixed inset-0 z-[9999] bg-[#060608] flex items-center justify-center"
+          className="fixed inset-0 z-[9999] bg-[#030308] flex items-center justify-center"
           initial={{ opacity: 1 }}
-          exit={{ 
-            opacity: 0,
-            transition: { duration: 0.5 }
-          }}
+          exit={{ opacity: 0, transition: { duration: 0.4 } }}
         >
           <div className="text-center">
-            {/* Animated logo */}
+            {/* Logo */}
             <motion.div
-              className="w-16 h-16 mx-auto mb-8 relative"
+              className="w-14 h-14 mx-auto mb-6 relative"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.4 }}
             >
-              <div className="absolute inset-0 border-2 border-cyan-500/30 rounded-2xl" />
+              <div className="absolute inset-0 border border-sky-500/20 rounded-xl" />
               <motion.div 
-                className="absolute inset-0 border-2 border-cyan-500 rounded-2xl"
-                initial={{ scale: 0.8, opacity: 0 }}
+                className="absolute inset-1 border border-sky-500/40 rounded-lg"
+                initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.2 }}
+                transition={{ delay: 0.15 }}
               />
               <motion.div 
-                className="absolute inset-2 bg-cyan-500/10 rounded-xl flex items-center justify-center"
+                className="absolute inset-2 bg-sky-500/10 rounded flex items-center justify-center"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
+                transition={{ delay: 0.3 }}
               >
-                <span className="font-display text-xl font-bold text-cyan-400">ZF</span>
+                <span className="font-display text-lg font-bold text-sky-400">ZF</span>
               </motion.div>
             </motion.div>
 
-            {/* Progress bar */}
-            <div className="w-48 mx-auto mb-4">
-              <div className="h-[1px] bg-zinc-800">
+            {/* Progress */}
+            <div className="w-40 mx-auto mb-3">
+              <div className="h-[1px] bg-slate-800">
                 <motion.div
-                  className="h-full bg-cyan-500"
+                  className="h-full bg-sky-500"
                   initial={{ width: '0%' }}
                   animate={{ width: `${progress}%` }}
                   transition={{ ease: "easeOut" }}
@@ -78,9 +75,8 @@ const Preloader = ({ onComplete }) => {
               </div>
             </div>
 
-            {/* Progress text */}
             <motion.div 
-              className="font-mono text-xs text-zinc-600 tracking-widest"
+              className="font-mono text-xs text-slate-600 tracking-widest"
               key={Math.floor(progress)}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

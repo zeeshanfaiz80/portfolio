@@ -11,7 +11,7 @@ function App() {
   const [loading, setLoading] = useState(true)
 
   return (
-    <div className="min-h-screen bg-[#060608] text-zinc-50 antialiased">
+    <div className="min-h-screen bg-[#030308] text-slate-50 antialiased">
       <Preloader onComplete={() => setLoading(false)} />
       
       <main className="relative">
@@ -21,12 +21,12 @@ function App() {
         <ToolsSection />
         <ContactSection />
         
-        <footer className="border-t border-zinc-900/50 py-8 px-6">
-          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="font-mono text-xs text-zinc-600 tracking-widest">
+        <footer className="border-t border-slate-800/30 py-6 px-6">
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+            <div className="font-mono text-xs text-slate-600 tracking-wider">
               ZEESHAN FAIZ — IT INFRASTRUCTURE ENGINEER
             </div>
-            <div className="font-mono text-xs text-zinc-600">
+            <div className="font-mono text-xs text-slate-600">
               VIENNA, AUSTRIA
             </div>
           </div>

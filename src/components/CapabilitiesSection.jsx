@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion'
 import { 
-  Shield, Network, Server, Cloud, Wifi, Lock, 
-  Activity, Database, Code, Radio, Cpu, HardDrive,
-  Layers, RefreshCw, Eye, Terminal, Gauge, WifiOff
+  Shield, Network, Server, Eye, Cloud, Terminal,
+  Lock, Wifi, Database, Code, Cpu, Gauge
 } from 'lucide-react'
 
 const capabilityClusters = [
@@ -14,7 +13,7 @@ const capabilityClusters = [
       'FortiGate Firewall Administration',
       'pfSense & OPNsense',
       'IPS/IDS Configuration',
-      'SSL Inspection & Decryption',
+      'SSL Inspection',
       'Zero Trust Architecture',
       'VPN & Tunnel Management'
     ]
@@ -28,8 +27,8 @@ const capabilityClusters = [
       'OSPF & RIP',
       'MPLS & VPLS',
       'VLAN & VXLAN',
-      'Quality of Service (QoS)',
-      'Load Balancing (HAProxy, F5)'
+      'Quality of Service',
+      'Load Balancing'
     ]
   },
   {
@@ -89,60 +88,52 @@ const capabilityClusters = [
 const CapabilityCard = ({ cluster, index }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ delay: index * 0.1, duration: 0.6 }}
+      transition={{ delay: index * 0.1, duration: 0.5 }}
     >
       <motion.div 
-        className="glass-card rounded-2xl p-6 h-full group relative overflow-hidden"
-        whileHover={{ 
-          y: -12,
-          rotateX: 2,
-          rotateY: -2
-        }}
-        transition={{ duration: 0.4 }}
-        style={{ transformStyle: 'preserve-3d' }}
+        className="glass-card rounded-xl p-5 h-full group relative overflow-hidden"
+        whileHover={{ y: -6 }}
+        transition={{ duration: 0.3 }}
       >
-        {/* Glow effect on hover */}
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-cyan-500/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        {/* Hover Glow */}
+        <div className="absolute inset-0 bg-gradient-to-br from-sky-500/0 via-sky-500/3 to-sky-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         
-        {/* Corner accent */}
-        <div className="absolute top-0 right-0 w-20 h-20 overflow-hidden">
-          <div className="absolute top-0 right-0 w-px h-8 bg-gradient-to-b from-cyan-500/50 to-transparent" />
-          <div className="absolute top-0 right-0 h-px w-8 bg-gradient-to-l from-cyan-500/50 to-transparent" />
+        {/* Corner Accent */}
+        <div className="absolute top-0 right-0 w-12 h-12 overflow-hidden">
+          <div className="absolute top-0 right-0 w-px h-6 bg-gradient-to-b from-sky-500/40 to-transparent" />
+          <div className="absolute top-0 right-0 h-px w-6 bg-gradient-to-l from-sky-500/40 to-transparent" />
         </div>
 
         <div className="relative z-10">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 glass-panel rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-              <cluster.icon className="w-6 h-6 text-cyan-400" />
+            <div className="w-10 h-10 glass-panel rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+              <cluster.icon className="w-5 h-5 text-sky-400" />
             </div>
             <div>
-              <h3 className="font-display text-lg font-semibold">{cluster.title}</h3>
-              <p className="text-xs text-zinc-500">{cluster.description}</p>
+              <h3 className="font-display text-base font-semibold">{cluster.title}</h3>
+              <p className="text-xs text-slate-500">{cluster.description}</p>
             </div>
           </div>
           
-          <ul className="space-y-2">
+          <ul className="space-y-1.5">
             {cluster.capabilities.map((cap, i) => (
               <motion.li 
                 key={i}
-                className="text-sm text-zinc-400 flex items-center gap-2 group-hover:text-zinc-300 transition-colors"
+                className="text-sm text-slate-400 flex items-center gap-2 group-hover:text-slate-300 transition-colors"
                 initial={{ opacity: 0, x: -10 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 + i * 0.05 }}
+                transition={{ delay: index * 0.1 + i * 0.03 }}
               >
-                <span className="w-1 h-1 rounded-full bg-cyan-500/50 group-hover:bg-cyan-400 transition-colors" />
+                <span className="w-1 h-1 rounded-full bg-sky-500/50 group-hover:bg-sky-400 transition-colors" />
                 {cap}
               </motion.li>
             ))}
           </ul>
         </div>
-
-        {/* Bottom line accent */}
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zinc-800 to-transparent" />
       </motion.div>
     </motion.div>
   )
@@ -150,32 +141,33 @@ const CapabilityCard = ({ cluster, index }) => {
 
 const CapabilitiesSection = () => {
   return (
-    <section id="capabilities" className="py-32 relative overflow-hidden">
-      {/* Background accent */}
+    <section id="capabilities" className="py-24 md:py-32 relative overflow-hidden">
+      {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-cyan-500/3 rounded-full blur-[150px]" />
-        <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-emerald-500/2 rounded-full blur-[120px]" />
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-sky-500/5 rounded-full blur-[150px]" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-sky-600/3 rounded-full blur-[120px]" />
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
+      <div className="max-w-5xl mx-auto px-6 relative z-10">
+        {/* Header */}
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
         >
-          <span className="font-mono text-xs text-cyan-400 tracking-[0.3em]">// CAPABILITIES</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mt-4">
+          <span className="font-mono text-xs text-sky-400 tracking-[0.3em]">// CAPABILITIES</span>
+          <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 text-white">
             Technical <span className="text-gradient">Expertise</span>
           </h2>
-          <p className="mt-4 text-zinc-500 max-w-2xl mx-auto">
-            Comprehensive skill set spanning network infrastructure, security architecture, 
-            virtualization, and cloud platforms — built over 7+ years of hands-on experience.
+          <p className="mt-4 text-slate-500 max-w-xl mx-auto">
+            Comprehensive skills built over 7+ years of hands-on infrastructure experience.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Cards Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {capabilityClusters.map((cluster, index) => (
             <CapabilityCard key={cluster.title} cluster={cluster} index={index} />
           ))}

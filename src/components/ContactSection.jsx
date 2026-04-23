@@ -10,86 +10,83 @@ const contactInfo = [
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-32 relative overflow-hidden">
+    <section id="contact" className="py-24 md:py-32 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-cyan-500/5 rounded-full blur-[200px]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-sky-500/5 rounded-full blur-[180px]" />
       </div>
 
-      <div className="max-w-4xl mx-auto px-6 relative z-10">
+      <div className="max-w-3xl mx-auto px-6 relative z-10">
         <motion.div 
-          className="glass-card rounded-3xl p-8 md:p-12 text-center relative overflow-hidden"
-          initial={{ opacity: 0, y: 40 }}
+          className="glass-card rounded-2xl p-8 md:p-10 text-center relative overflow-hidden"
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
         >
-          {/* Decorative elements */}
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
-          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
-          <div className="absolute top-0 left-0 w-px h-full bg-gradient-to-b from-cyan-500/20 to-transparent" />
-          <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-cyan-500/20 to-transparent" />
+          {/* Border Accents */}
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sky-500/30 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sky-500/30 to-transparent" />
           
-          {/* Corner accents */}
-          <div className="absolute top-4 left-4 w-8 h-8 border-l border-t border-cyan-500/20 rounded-tl" />
-          <div className="absolute top-4 right-4 w-8 h-8 border-r border-t border-cyan-500/20 rounded-tr" />
-          <div className="absolute bottom-4 left-4 w-8 h-8 border-l border-b border-cyan-500/20 rounded-bl" />
-          <div className="absolute bottom-4 right-4 w-8 h-8 border-r border-b border-cyan-500/20 rounded-br" />
+          {/* Corner Accents */}
+          <div className="absolute top-3 left-3 w-6 h-6 border-l border-t border-sky-500/20 rounded-tl" />
+          <div className="absolute top-3 right-3 w-6 h-6 border-r border-t border-sky-500/20 rounded-tr" />
+          <div className="absolute bottom-3 left-3 w-6 h-6 border-l border-b border-sky-500/20 rounded-bl" />
+          <div className="absolute bottom-3 right-3 w-6 h-6 border-r border-b border-sky-500/20 rounded-br" />
 
           <motion.div
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3, type: "spring" }}
-            className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center"
+            transition={{ delay: 0.2, type: "spring" }}
+            className="w-16 h-16 mx-auto mb-5 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center"
           >
-            <Sparkles className="w-8 h-8 text-cyan-400" />
+            <Sparkles className="w-7 h-7 text-sky-400" />
           </motion.div>
 
-          <span className="font-mono text-xs text-cyan-400 tracking-[0.3em]">// CONTACT</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 mb-4">
+          <span className="font-mono text-xs text-sky-400 tracking-[0.3em]">// CONTACT</span>
+          <h2 className="font-display text-3xl md:text-4xl font-bold mt-3 mb-3 text-white">
             Let's <span className="text-gradient">Connect</span>
           </h2>
-          <p className="text-zinc-400 max-w-lg mx-auto mb-10 leading-relaxed">
-            I'm always open to discussing new opportunities, infrastructure challenges, 
-            or technical conversations. Let's build something stable together.
+          <p className="text-slate-400 max-w-md mx-auto mb-8">
+            Open to discussing new opportunities, infrastructure challenges, or technical conversations.
           </p>
 
           {/* Contact Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
             {contactInfo.map((item, index) => (
               <motion.a
                 key={item.label}
                 href={item.href}
                 target={item.href?.startsWith('http') ? '_blank' : undefined}
                 rel={item.href?.startsWith('http') ? 'noreferrer' : undefined}
-                className="group p-4 glass-panel rounded-xl text-center hover:border-cyan-500/30 transition-all"
-                initial={{ opacity: 0, y: 20 }}
+                className="group p-3 glass-panel rounded-lg text-center hover:border-sky-500/30 transition-all"
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.2 + index * 0.1 }}
-                whileHover={{ y: -5 }}
+                transition={{ delay: 0.15 + index * 0.08 }}
+                whileHover={{ y: -3 }}
               >
-                <item.icon className="w-5 h-5 mx-auto text-zinc-500 group-hover:text-cyan-400 transition-colors" />
-                <div className="text-xs text-zinc-600 mt-2">{item.label}</div>
-                <div className="text-sm text-zinc-400 group-hover:text-zinc-200 mt-1 truncate px-1">
+                <item.icon className="w-4 h-4 mx-auto text-slate-500 group-hover:text-sky-400 transition-colors" />
+                <div className="text-[10px] text-slate-600 mt-2">{item.label}</div>
+                <div className="text-xs text-slate-400 group-hover:text-slate-200 mt-0.5 truncate px-1">
                   {item.value}
                 </div>
               </motion.a>
             ))}
           </div>
 
-          {/* CTA Buttons */}
+          {/* CTAs */}
           <motion.div 
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
-            initial={{ opacity: 0, y: 20 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-3"
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.6 }}
+            transition={{ delay: 0.5 }}
           >
             <a 
               href="mailto:zeeshanfaiz80@gmail.com"
-              className="group inline-flex items-center gap-3 px-8 py-4 bg-cyan-500 text-black font-semibold rounded-xl hover:bg-cyan-400 transition-all"
+              className="group inline-flex items-center gap-2 px-6 py-3 bg-sky-500 text-black font-semibold rounded-lg hover:bg-sky-400 transition-all"
             >
               <Send className="w-4 h-4" />
               Send Message
@@ -99,10 +96,10 @@ const ContactSection = () => {
               href="https://www.linkedin.com/in/zeeshan-faiz-637103165/"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 glass-panel rounded-xl text-zinc-300 hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 glass-panel rounded-lg text-slate-300 hover:text-white transition-colors"
             >
-              <Link2 className="w-5 h-5" />
-              LinkedIn Profile
+              <Link2 className="w-4 h-4" />
+              LinkedIn
             </a>
           </motion.div>
         </motion.div>
