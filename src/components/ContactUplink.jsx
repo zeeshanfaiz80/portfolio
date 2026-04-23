@@ -19,8 +19,8 @@ const ContactUplink = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none" />
           
           <div className="relative z-10">
             <motion.div 
@@ -30,7 +30,7 @@ const ContactUplink = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
             >
-              <span className="text-cyan-400 font-mono text-xs md:text-sm tracking-wider">// CONTACT</span>
+              <span className="text-blue-400 font-mono text-xs md:text-sm tracking-wider">// CONTACT</span>
               <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mt-1 md:mt-2 mb-2 md:mb-3">
                 Reach Out <span className="glow-text text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Directly</span>
               </h2>
@@ -59,7 +59,7 @@ const ContactUplink = () => {
                     className="group glass rounded-xl md:rounded-2xl p-3 md:p-4 border border-white/10 hover:border-cyan-400/30 transition-all"
                   >
                     <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-                      <Icon className="w-4 h-4 md:w-5 md:h-5 text-cyan-400" />
+                      <Icon className="w-4 h-4 md:w-5 md:h-5 text-blue-400" />
                     </div>
                     <p className="text-xs uppercase tracking-[0.15em] text-gray-400 mb-1">{item.label}</p>
                     {item.href ? (

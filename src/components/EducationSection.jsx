@@ -40,7 +40,7 @@ const EducationSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-cyan-400 font-mono text-xs md:text-sm tracking-wider">// EDUCATION</span>
+          <span className="text-blue-400 font-mono text-xs md:text-sm tracking-wider">// EDUCATION</span>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mt-1 md:mt-2">
             Academic <span className="glow-text text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Background</span>
           </h2>
@@ -62,10 +62,10 @@ const EducationSection = () => {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-4 relative">
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <GraduationCap className="w-5 h-5 md:w-6 md:h-5 text-cyan-400" />
+                    <GraduationCap className="w-5 h-5 md:w-6 md:h-5 text-blue-400" />
                   </div>
                   <div>
-                    <h3 className="text-base md:text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">{edu.degree}</h3>
+                    <h3 className="text-base md:text-lg font-semibold text-white group-hover:text-blue-300 transition-colors">{edu.degree}</h3>
                     <div className="flex flex-wrap items-center gap-2 mt-1">
                       <div className="flex items-center gap-1 text-sm text-gray-400">
                         <MapPin className="w-3 h-3" />
@@ -80,7 +80,7 @@ const EducationSection = () => {
                     <p className="text-xs md:text-sm text-gray-500 mt-2">{edu.details}</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-1 text-xs md:text-sm uppercase tracking-[0.25em] text-cyan-300 whitespace-nowrap bg-cyan-500/10 px-3 py-1.5 rounded-full">
+                <div className="flex items-center gap-1 text-xs md:text-sm uppercase tracking-[0.25em] text-blue-300 whitespace-nowrap bg-cyan-500/10 px-3 py-1.5 rounded-full">
                   <Calendar className="w-3 h-3" />
                   <span>{edu.period}</span>
                 </div>

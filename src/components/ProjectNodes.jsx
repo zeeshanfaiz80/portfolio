@@ -88,9 +88,9 @@ const ProjectNodes = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-cyan-400 font-mono text-xs md:text-sm tracking-wider">// EXPERIENCE</span>
+          <span className="text-blue-400 font-mono text-xs md:text-sm tracking-wider">// EXPERIENCE</span>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mt-1 md:mt-2">
-            Professional <span className="glow-text text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Career</span>
+            Professional <span className="glow-text text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Career</span>
           </h2>
         </motion.div>
 
@@ -111,9 +111,9 @@ const ProjectNodes = () => {
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
-                      <Briefcase className="w-4 h-4 md:w-5 md:h-5 text-cyan-400" />
+                      <Briefcase className="w-4 h-4 md:w-5 md:h-5 text-blue-400" />
                     </div>
-                    <h3 className="text-base md:text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">{role.title}</h3>
+                    <h3 className="text-base md:text-lg font-semibold text-white group-hover:text-blue-300 transition-colors">{role.title}</h3>
                   </div>
                   <div className="flex flex-wrap items-center gap-3 text-xs md:text-sm">
                     <div className="flex items-center gap-1 text-gray-400">
@@ -127,7 +127,7 @@ const ProjectNodes = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-1 text-xs uppercase tracking-[0.25em] text-cyan-300 mt-1 md:mt-0">
+                <div className="flex items-center gap-1 text-xs uppercase tracking-[0.25em] text-blue-300 mt-1 md:mt-0">
                   <Calendar className="w-3 h-3" />
                   <span>{role.period}</span>
                 </div>
@@ -141,7 +141,7 @@ const ProjectNodes = () => {
                     transition={{ delay: index * 0.1 + i * 0.05 }}
                     className="flex items-start gap-2"
                   >
-                    <span className="inline-block w-1.5 h-1.5 mt-1.5 rounded-full bg-cyan-500/50 flex-shrink-0" />
+                    <span className="inline-block w-1.5 h-1.5 mt-1.5 rounded-full bg-blue-500/50 flex-shrink-0" />
                     <span>{bullet}</span>
                   </motion.li>
                 ))}

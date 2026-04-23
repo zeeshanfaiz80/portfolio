@@ -49,11 +49,11 @@ function App() {
     const velocities = new Float32Array(particleCount * 3)
     
     const colorPalette = [
-      new THREE.Color(0x00ffc8),
-      new THREE.Color(0x6400ff),
-      new THREE.Color(0x00aaff),
-      new THREE.Color(0xff00ff),
-      new THREE.Color(0xffff00),
+      new THREE.Color(0x00d4ff),
+      new THREE.Color(0x0066ff),
+      new THREE.Color(0x0099ff),
+      new THREE.Color(0x6366f1),
+      new THREE.Color(0x3b82f6),
     ]
 
     for (let i = 0; i < particleCount; i++) {
@@ -211,16 +211,16 @@ function App() {
 
     gsap.utils.toArray('.glass').forEach((el) => {
       gsap.fromTo(el, 
-        { opacity: 0, y: 40, filter: 'blur(10px)' },
+        { opacity: 0, y: 60, filter: 'blur(12px)' },
         {
           opacity: 1,
           y: 0,
           filter: 'blur(0px)',
-          duration: 0.8,
-          ease: 'power2.out',
+          duration: 1.2,
+          ease: 'power3.out',
           scrollTrigger: {
             trigger: el,
-            start: 'top 85%',
+            start: 'top 90%',
             toggleActions: 'play none none reverse'
           }
         }
@@ -247,8 +247,8 @@ function App() {
         className="fixed inset-0 w-full h-full"
         style={{ zIndex: 0 }}
       />
-      <div className="glow-orb absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-[80px] pointer-events-none" />
-      <div className="glow-orb absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="glow-orb absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-[80px] pointer-events-none" />
+      <div className="glow-orb absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none" />
       <div className="glow-orb absolute top-1/2 right-1/3 w-48 h-48 bg-blue-500/10 rounded-full blur-[60px] pointer-events-none" style={{ animationDelay: '1s' }} />
       <NeuralBackground />
       <div className="relative z-10">
@@ -257,20 +257,20 @@ function App() {
             <div className="glass-nav rounded-full px-6 py-3 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="relative">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                  <div className="absolute inset-0 w-2 h-2 bg-cyan-400 rounded-full animate-ping opacity-75"></div>
+                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <div className="absolute inset-0 w-2 h-2 bg-blue-400 rounded-full animate-ping opacity-75"></div>
                 </div>
-                <span className="text-cyan-400 font-mono text-sm tracking-widest">ZEESHAN FAIZ</span>
+                <span className="text-blue-400 font-mono text-sm tracking-widest">ZEESHAN FAIZ</span>
               </div>
               <div className="hidden md:flex items-center gap-8">
-                <a href="#experience" className="text-gray-400 hover:text-cyan-400 transition-all text-sm font-mono">EXP</a>
-                <a href="#skills" className="text-gray-400 hover:text-cyan-400 transition-all text-sm font-mono">SKILLS</a>
-                <a href="#projects" className="text-gray-400 hover:text-cyan-400 transition-all text-sm font-mono">PROJECTS</a>
-                <a href="#education" className="text-gray-400 hover:text-cyan-400 transition-all text-sm font-mono">EDU</a>
-                <a href="#contact" className="text-gray-400 hover:text-cyan-400 transition-all text-sm font-mono">CONTACT</a>
+                <a href="#experience" className="text-gray-400 hover:text-blue-400 transition-all text-sm font-mono">EXP</a>
+                <a href="#skills" className="text-gray-400 hover:text-blue-400 transition-all text-sm font-mono">SKILLS</a>
+                <a href="#projects" className="text-gray-400 hover:text-blue-400 transition-all text-sm font-mono">PROJECTS</a>
+                <a href="#education" className="text-gray-400 hover:text-blue-400 transition-all text-sm font-mono">EDU</a>
+                <a href="#contact" className="text-gray-400 hover:text-blue-400 transition-all text-sm font-mono">CONTACT</a>
               </div>
               <div className="flex items-center gap-2">
-                <span className="px-2 py-1 bg-cyan-500/20 rounded text-xs text-cyan-400 font-mono">ONLINE</span>
+                <span className="px-2 py-1 bg-blue-500/20 rounded text-xs text-blue-400 font-mono">ONLINE</span>
               </div>
             </div>
           </div>

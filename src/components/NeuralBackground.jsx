@@ -4,7 +4,7 @@ const NeuralBackground = () => {
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden">
       <motion.div 
-        className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"
+        className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
         animate={{ 
           x: [0, 100, 0],
           y: [0, 50, 0],

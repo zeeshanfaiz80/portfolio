@@ -69,7 +69,7 @@ const BentoProjects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-cyan-400 font-mono text-xs md:text-sm tracking-wider">// PROJECTS</span>
+          <span className="text-blue-400 font-mono text-xs md:text-sm tracking-wider">// PROJECTS</span>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mt-1 md:mt-2">
             Featured <span className="glow-text text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Work</span>
           </h2>
@@ -94,9 +94,9 @@ const BentoProjects = () => {
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-3">
                   <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Briefcase className="w-5 h-5 md:w-6 md:h-5 text-cyan-400" />
+                    <Briefcase className="w-5 h-5 md:w-6 md:h-5 text-blue-400" />
                   </div>
-                  <ArrowUpRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                  <ArrowUpRight className="w-4 h-4 text-gray-500 group-hover:text-blue-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                 </div>
                 
                 <h3 className="text-base md:text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors mb-1">

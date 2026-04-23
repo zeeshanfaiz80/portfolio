@@ -56,7 +56,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 pointer-events-none" />
           
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr_1fr] gap-6 lg:gap-8 items-center relative">
@@ -66,12 +66,12 @@ const HeroSection = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
-              <p className="text-xs md:text-sm uppercase tracking-[0.35em] text-cyan-300">Network Infrastructure Engineer</p>
+              <p className="text-xs md:text-sm uppercase tracking-[0.35em] text-blue-400">IT Infrastructure Engineer</p>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-                Zeeshan <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">Faiz</span>
+                Zeeshan <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400">Faiz</span>
               </h1>
-              <p className="text-sm md:text-base text-gray-300 leading-6">
-                Dynamic Network Infrastructure Engineer with extensive experience in designing, deploying, and managing secure enterprise network infrastructures across multi-site, high-availability environments. Proven expertise in multi-vendor firewall security (FortiGate, pfSense, OPNsense), advanced routing protocols (BGP, OSPF, MPLS), virtualization (VMware ESXi, Proxmox VE), and full-stack observability.
+              <p className="text-sm md:text-base text-slate-300 leading-relaxed">
+                IT Infrastructure Engineer with experience designing, implementing, and supporting secure, multi-site environments covering networks, servers, storage, and virtualization. Skilled in firewall administration, routing and switching, Linux and Microsoft 365 administration, backup and recovery, and infrastructure monitoring using common industry tools. Comfortable working with cross-functional teams, managing incidents in a structured way, and coordinating with vendors to keep business services stable and available.
               </p>
               <motion.div
                 className="flex flex-wrap gap-2 md:gap-3"
@@ -79,11 +79,11 @@ const HeroSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.75, duration: 0.6 }}
               >
-                <a href="#experience" className="group px-4 md:px-5 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-xs md:text-sm text-white font-semibold hover:opacity-90 transition-all hover:scale-105 flex items-center gap-2">
+                <a href="#experience" className="group px-4 md:px-5 py-2 bg-gradient-to-r from-blue-500 to-blue-500 rounded-full text-xs md:text-sm text-white font-semibold hover:opacity-90 transition-all hover:scale-105 flex items-center gap-2">
                   <Activity className="w-4 h-4 group-hover:animate-pulse" />
                   View Experience
                 </a>
-                <a href="#contact" className="group px-4 md:px-5 py-2 border border-cyan-400 rounded-full text-xs md:text-sm text-cyan-300 hover:bg-cyan-400/10 transition-colors flex items-center gap-2">
+                <a href="#contact" className="group px-4 md:px-5 py-2 border border-cyan-400 rounded-full text-xs md:text-sm text-blue-300 hover:bg-blue-400/10 transition-colors flex items-center gap-2">
                   <Lock className="w-4 h-4" />
                   Contact Details
                 </a>
@@ -97,7 +97,7 @@ const HeroSection = () => {
               transition={{ delay: 0.4, duration: 0.8, type: "spring" }}
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-purple-500/30 rounded-full blur-2xl scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 via-blue-500/30 to-purple-500/30 rounded-full blur-2xl scale-110" />
                 <div className="relative w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-2 border-cyan-400/30 shadow-[0_0_30px_rgba(0,255,200,0.3)]">
                   <img 
                     src={profilePhoto} 
@@ -124,8 +124,8 @@ const HeroSection = () => {
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-cyan-500/20 flex items-center justify-center">
-                      <Cloud className="w-4 h-4 text-cyan-400" />
+                    <div className="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                      <Cloud className="w-4 h-4 text-blue-400" />
                     </div>
                     <div>
                       <p className="text-xs text-gray-400">Location</p>
@@ -133,21 +133,21 @@ const HeroSection = () => {
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-cyan-500/20 flex items-center justify-center">
-                      <Mail className="w-4 h-4 text-cyan-400" />
+                    <div className="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                      <Mail className="w-4 h-4 text-blue-400" />
                     </div>
                     <div>
                       <p className="text-xs text-gray-400">Email</p>
-                      <a href="mailto:zeeshanfaiz80@gmail.com" className="text-sm text-cyan-300 hover:text-cyan-100">zeeshanfaiz80@gmail.com</a>
+                      <a href="mailto:zeeshanfaiz80@gmail.com" className="text-sm text-blue-300 hover:text-cyan-100">zeeshanfaiz80@gmail.com</a>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-cyan-500/20 flex items-center justify-center">
-                      <Phone className="w-4 h-4 text-cyan-400" />
+                    <div className="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                      <Phone className="w-4 h-4 text-blue-400" />
                     </div>
                     <div>
                       <p className="text-xs text-gray-400">Phone</p>
-                      <a href="tel:+4367762050993" className="text-sm text-white hover:text-cyan-300">+43 677 62050993</a>
+                      <a href="tel:+4367762050993" className="text-sm text-white hover:text-blue-300">+43 677 62050993</a>
                     </div>
                   </div>
                   <a 
@@ -161,7 +161,7 @@ const HeroSection = () => {
                     </div>
                     <div>
                       <p className="text-xs text-gray-400">LinkedIn</p>
-                      <p className="text-sm text-cyan-300">View Profile</p>
+                      <p className="text-sm text-blue-300">View Profile</p>
                     </div>
                   </a>
                 </div>
@@ -185,11 +185,11 @@ const SkillsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="absolute -top-20 -right-20 w-40 h-40 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -top-20 -right-20 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
           
           <div className="text-center mb-4 md:mb-6 relative">
-            <span className="text-cyan-400 font-mono text-xs md:text-sm tracking-wider">// SKILLS</span>
+            <span className="text-blue-400 font-mono text-xs md:text-sm tracking-wider">// SKILLS</span>
             <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mt-1 md:mt-2">
               Core <span className="glow-text text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Skills</span>
             </h2>
@@ -205,11 +205,11 @@ const SkillsSection = () => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="group rounded-xl md:rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-3 md:p-4 hover:border-cyan-400/30 hover:bg-gradient-to-br hover:from-cyan-500/10 hover:to-purple-500/10 transition-all cursor-default"
+                  className="group rounded-xl md:rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-3 md:p-4 hover:border-cyan-400/30 hover:bg-gradient-to-br hover:from-blue-500/10 hover:to-purple-500/10 transition-all cursor-default"
                 >
                   <div className="flex items-center gap-2 md:gap-3">
-                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Icon className="w-4 h-4 md:w-5 md:h-5 text-cyan-400" />
+                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-blue-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Icon className="w-4 h-4 md:w-5 md:h-5 text-blue-400" />
                     </div>
                     <span className="text-xs md:text-sm text-gray-200 group-hover:text-white transition-colors">{item}</span>
                   </div>
