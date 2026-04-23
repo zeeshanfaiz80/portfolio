@@ -81,7 +81,7 @@ const HeroSection = () => {
       >
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
-          <div className="lg:col-span-7 space-y-8">
+          <div className="lg:col-span-7 space-y-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -135,7 +135,7 @@ const HeroSection = () => {
 
             {/* CTAs */}
             <motion.div 
-              className="flex flex-wrap items-center gap-4"
+              className="flex flex-wrap items-center gap-3"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
@@ -157,7 +157,7 @@ const HeroSection = () => {
 
             {/* Metrics */}
             <motion.div 
-              className="grid grid-cols-4 gap-6 pt-8 border-t border-slate-800/50"
+              className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-10 border-t border-slate-800/50"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.6 }}

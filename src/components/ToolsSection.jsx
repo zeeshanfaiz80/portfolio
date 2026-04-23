@@ -24,7 +24,7 @@ const ToolTag = ({ tool, delay }) => (
 
 const ToolsSection = () => {
   return (
-    <section id="tools" className="py-24 md:py-32 relative overflow-hidden">
+    <section id="tools" className="py-32 md:py-40 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#030308] via-[#0a1428]/20 to-[#030308]" />
       
@@ -85,7 +85,7 @@ const ToolsSection = () => {
 
         {/* Bottom Note */}
         <motion.div 
-          className="mt-12 text-center"
+          className="mt-16 text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -96,7 +96,7 @@ const ToolsSection = () => {
               animate={{ opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
-            <span className="text-sm text-slate-500">Always exploring new technologies</span>
+            <span className="text-sm text-slate-500 whitespace-nowrap">Always exploring new technologies</span>
           </div>
         </motion.div>
       </div>

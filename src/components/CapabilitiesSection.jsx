@@ -141,7 +141,7 @@ const CapabilityCard = ({ cluster, index }) => {
 
 const CapabilitiesSection = () => {
   return (
-    <section id="capabilities" className="py-24 md:py-32 relative overflow-hidden">
+    <section id="capabilities" className="py-32 md:py-40 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-sky-500/5 rounded-full blur-[150px]" />

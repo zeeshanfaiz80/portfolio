@@ -21,8 +21,8 @@ function App() {
         <ToolsSection />
         <ContactSection />
         
-        <footer className="border-t border-slate-800/30 py-6 px-6">
-          <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+        <footer className="border-t border-slate-800/30 py-8 px-6 mt-8">
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="font-mono text-xs text-slate-600 tracking-wider">
               ZEESHAN FAIZ — IT INFRASTRUCTURE ENGINEER
             </div>

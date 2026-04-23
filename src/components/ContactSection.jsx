@@ -10,7 +10,7 @@ const contactInfo = [
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-24 md:py-32 relative overflow-hidden">
+    <section id="contact" className="py-32 md:py-40 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-sky-500/5 rounded-full blur-[180px]" />
@@ -45,15 +45,15 @@ const ContactSection = () => {
           </motion.div>
 
           <span className="font-mono text-xs text-sky-400 tracking-[0.3em]">// CONTACT</span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold mt-3 mb-3 text-white">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mt-3 mb-4 text-white">
             Let's <span className="text-gradient">Connect</span>
           </h2>
-          <p className="text-slate-400 max-w-md mx-auto mb-8">
+          <p className="text-slate-400 max-w-md mx-auto mb-10">
             Open to discussing new opportunities, infrastructure challenges, or technical conversations.
           </p>
 
           {/* Contact Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
             {contactInfo.map((item, index) => (
               <motion.a
                 key={item.label}
@@ -78,7 +78,7 @@ const ContactSection = () => {
 
           {/* CTAs */}
           <motion.div 
-            className="flex flex-col sm:flex-row items-center justify-center gap-3"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -86,7 +86,7 @@ const ContactSection = () => {
           >
             <a 
               href="mailto:zeeshanfaiz80@gmail.com"
-              className="group inline-flex items-center gap-2 px-6 py-3 bg-sky-500 text-black font-semibold rounded-lg hover:bg-sky-400 transition-all"
+              className="group inline-flex items-center gap-2 px-7 py-3.5 bg-sky-500 text-black font-semibold rounded-lg hover:bg-sky-400 transition-all"
             >
               <Send className="w-4 h-4" />
               Send Message
@@ -96,7 +96,7 @@ const ContactSection = () => {
               href="https://www.linkedin.com/in/zeeshan-faiz-637103165/"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 glass-panel rounded-lg text-slate-300 hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 px-7 py-3.5 glass-panel rounded-lg text-slate-300 hover:text-white transition-colors"
             >
               <Link2 className="w-4 h-4" />
               LinkedIn

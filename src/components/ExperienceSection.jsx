@@ -101,7 +101,7 @@ const ExperienceSection = () => {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ['0%', '100%'])
 
   return (
-    <section id="experience" className="py-24 md:py-32 relative" ref={containerRef}>
+    <section id="experience" className="py-32 md:py-40 relative" ref={containerRef}>
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#030308] via-[#0a1428]/30 to-[#030308]" />
 
@@ -119,7 +119,7 @@ const ExperienceSection = () => {
             Career <span className="text-gradient">Journey</span>
           </h2>
           <p className="mt-4 text-slate-500 max-w-xl mx-auto">
-            A decade of building and securing mission-critical infrastructure
+            7+ years of building and securing mission-critical infrastructure
           </p>
         </motion.div>
 
@@ -136,7 +136,7 @@ const ExperienceSection = () => {
           {experiences.map((exp, index) => (
             <motion.div
               key={exp.id}
-              className={`relative flex items-start mb-12 ${
+              className={`relative flex items-start mb-16 ${
                 index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
               }`}
               initial={{ opacity: 0, y: 40 }}
